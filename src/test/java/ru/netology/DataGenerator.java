@@ -15,10 +15,10 @@ public class DataGenerator {
         return LocalDate.now().plusDays(shift).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
     }
 
-    public static String generateCity() {
-        return faker.address().city();
-    }
-
+public static String generateCity() {
+    String city = faker.options().option("Москва", "Санкт-Петербург", "Майкоп", "Горно-Алтайск", "Уфа", "Магас", "Новосибирск", "Барнаул", "Абакан" , "Томск", "Тула", "Тюмень", "Ульяновск", "Челябинск", "Ярославль");
+    return city;
+}
     public static String generateName() {
         return faker.name().fullName();
     }
